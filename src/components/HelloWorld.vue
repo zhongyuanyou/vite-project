@@ -24,7 +24,7 @@ const inner = ref(500)
       <p>Subscribers: {{ subscribers }}</p>
       <p>inner: {{ inner }}</p>
     </div>
-    <button @click="subscribers++">v-memo依赖项(Subscribers)++</button>
+    <el-button @click="subscribers++">v-memo依赖项(Subscribers)++</el-button>
     <!-- 这里改变内部依赖 视图不会更新 -->
     <button @click="inner++">子节点依赖项(inner)++</button>
     <div>
@@ -34,7 +34,10 @@ const inner = ref(500)
     </div>
   </div>
 </template>
-<style scoped>
+<style scoped less>
+:deep() .el-button {
+  color: red;
+}
 a {
   color: #42b983;
 }
