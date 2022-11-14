@@ -34,9 +34,10 @@ const inner = ref(500)
     </div>
   </div>
 </template>
-<style scoped less>
-:deep() .el-button {
-  color: red;
+<style lang="less" scoped>
+/deep/ .el-button {
+  color: @red;
+  background: @bgColor;
 }
 a {
   color: #42b983;

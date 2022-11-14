@@ -5,6 +5,9 @@ import path from 'path'
 export default defineConfig(({ command, mode }) => {
   const config = loadEnv(mode, './')
   return {
+    define: {
+      'process.env': {},
+    },
     plugins: [vue()],
     resolve: {
       alias: {

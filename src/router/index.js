@@ -13,6 +13,10 @@ const router = createRouter({
       path: '/main',
       component: () => import('../pages/main.vue'),
     },
+    {
+      path: '/button',
+      component: () => import('../pages/button/index.vue'),
+    },
   ],
 })
 export default router
