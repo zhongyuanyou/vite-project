@@ -17,6 +17,10 @@ const router = createRouter({
       path: '/button',
       component: () => import('../pages/button/index.vue'),
     },
+    {
+      path: '/canvas',
+      component: () => import('../pages/canvas/index.vue'),
+    },
   ],
 })
 export default router

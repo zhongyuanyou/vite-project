@@ -21,7 +21,7 @@
     <div class="button submit" @click="changeName">保存</div>
     <div class="list-box">
       <el-table :data="$store.state.userList" style="width: 310px" border>
-        <el-table-column prop="name" align="center" label="姓名" width="90">
+        <el-table-column prop="name" align="center" label="姓名" width="80">
         </el-table-column>
         <el-table-column prop="age" align="center" label="年龄" width="60">
         </el-table-column>
@@ -36,17 +36,6 @@
           </template>
         </el-table-column>
       </el-table>
-      <!-- <div class="item" v-for="(item, idx) in $store.state.userList" :key="idx">
-        <div class="item-cell">
-          <span>{{ item.name }}</span>
-          <span>{{ item.age }}</span>
-          <span>{{ item.sex == 0 ? '男' : '女' }}</span>
-          <div>
-            <span @click="delUser(idx)">删除</span
-            ><span @click="modifyUser(idx)">修改</span>
-          </div>
-        </div>
-      </div> -->
     </div>
   </div>
 </template>
@@ -66,7 +55,6 @@ export default {
     }
   },
   mounted() {
-    console.log(this.$store)
     this.$http({
       url: this.$api.SmsManageApi.QueryDictrys + '?key=微商城_抵扣金交易类型',
       method: 'post',
@@ -104,13 +92,12 @@ export default {
 </script>
 
 <style lang="less" scoped>
-/deep/ .el-form {
+:deep(.el-form) {
   width: 300px;
   margin-top: 20px;
 }
 .list-box {
   width: 300px;
-  min-height: 400px;
 }
 .btn {
   font-size: 14px;
