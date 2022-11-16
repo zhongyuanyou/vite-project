@@ -18,6 +18,10 @@ const router = createRouter({
       component: () => import('../pages/button/index.vue'),
     },
     {
+      path: '/3dButton',
+      component: () => import('../pages/button/3dButton.vue'),
+    },
+    {
       path: '/canvas',
       component: () => import('../pages/canvas/index.vue'),
     },
