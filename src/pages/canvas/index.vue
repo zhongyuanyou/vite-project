@@ -10,12 +10,28 @@
       :propsTitle="title"
       ref="input"
     ></aInput>
-    <el-button @click="change">修改</el-button>
+    <el-button @click="change">修改{{ count }}</el-button>
+    <zInput
+      placeholder="请输入"
+      v-model="textMsg"
+      @sureBtn="sureBtn"
+      btnText="确 定"
+    ></zInput>
+    <div>{{ textMsg }}</div>
   </div>
 </template>
 <script setup>
 import aInput from '../../components/Ainput.vue'
-import { ref, onMounted } from 'vue'
+import zInput from '../../components/ZInput.vue'
+import {
+  ref,
+  onMounted,
+  watchEffect,
+  onUnmounted,
+  useAttrs,
+  useSlots,
+  reactive,
+} from 'vue'
 const arrayData = [
   { id: 2, title: '中国', parent_id: 0 },
   { id: 3, title: '广东省', parent_id: 2 },
@@ -27,16 +43,24 @@ const arrayData = [
 const input = ref(null)
 const test = ref('')
 const title = ref('商品信息')
+const count = ref(0)
 const result = []
+const textMsg = ref('')
+const attrs = useAttrs()
+const slots = useSlots()
 function change() {
   title.value = test.value
   input.value.changeTitle()
-  console.log(arrayData)
 }
 function blur() {
   title.value = test.value
 }
+function sureBtn(e) {
+  console.log(e)
+}
 onMounted(() => {
+  console.log(attrs)
+  console.log(slots)
   const obj = arrayData.reduce((pre, cur) => {
     pre[cur.id] = cur
     return pre
@@ -55,6 +79,7 @@ onMounted(() => {
 
   console.log(result)
 })
+watchEffect(() => console.log(test.value), console.log(title.value))
 </script>
 <style lang="less" scoped>
 .canvas-box {

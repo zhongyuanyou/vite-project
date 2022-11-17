@@ -25,6 +25,10 @@ const router = createRouter({
       path: '/canvas',
       component: () => import('../pages/canvas/index.vue'),
     },
+    {
+      path: '/prizeDraw',
+      component: () => import('../pages/prizeDraw/index.vue'),
+    },
   ],
 })
 export default router
