@@ -33,6 +33,18 @@ const router = createRouter({
       path: '/dialog',
       component: () => import('../pages/dialog/index.vue'),
     },
+    {
+      path: '/glassWrapper',
+      component: () => import('../pages/glassWrapper/index.vue'),
+    },
+    {
+      path: '/three',
+      component: () => import('../pages/three/index.vue'),
+    },
+    {
+      path: '/testVue',
+      component: () => import('../pages/testVue/index.vue'),
+    },
   ],
 })
 export default router

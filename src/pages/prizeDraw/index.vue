@@ -1,14 +1,13 @@
 <template>
   <div class="prize-draw">
-    <div
-      class="prize-item"
-      v-for="(item, idx) in state.prizeList"
-      :key="idx"
-      :class="[state.currentIndex == idx ? 'active' : '']"
-      @click="start(idx)"
-    >
+    <div class="prize-item"
+         v-for="(item, idx) in state.prizeList"
+         :key="idx"
+         :class="[state.currentIndex == idx ? 'active' : '']"
+         @click="start(idx)">
       <img :src="item.pic" />
-      <div class="name" v-show="idx != 4">{{ item.name }}</div>
+      <div class="name"
+           v-show="idx != 4">{{ item.name }}</div>
     </div>
   </div>
 </template>
@@ -77,7 +76,7 @@ const getRandomNum = () => {
   return prizeSort[Math.floor(Math.random() * prizeSort.length)]
 }
 
-function start(i) {
+function start (i) {
   if (i === 4 && !state.isRunning) {
     // 重置数据
     state.currentRunCount = 0
