@@ -29,6 +29,10 @@ const router = createRouter({
       path: '/prizeDraw',
       component: () => import('../pages/prizeDraw/index.vue'),
     },
+    {
+      path: '/dialog',
+      component: () => import('../pages/dialog/index.vue'),
+    },
   ],
 })
 export default router
