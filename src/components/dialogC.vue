@@ -1,16 +1,24 @@
 <template>
   <div class="dialog-c">
-    <el-dialog>
-
-    </el-dialog>
+    {{title}}
   </div>
 </template>
 
 <script>
-export default {
+import { defineComponent, toRef } from 'vue'
 
-}
+export default defineComponent({
+  props: {
+    title: Number,
+
+  },
+  setup (props) {
+    const title = toRef(props, 'title')
+    return { title }
+  },
+})
 </script>
+
 
 <style lang="less" scoped>
 </style>
