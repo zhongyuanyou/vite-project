@@ -45,6 +45,10 @@ const router = createRouter({
       path: '/testVue',
       component: () => import('../pages/testVue/index.vue'),
     },
+    {
+      path: '/tsTest',
+      component: () => import('../pages/tsTest/index.vue'),
+    },
   ],
 })
 export default router
