@@ -49,6 +49,10 @@ const router = createRouter({
       path: '/tsTest',
       component: () => import('../pages/tsTest/index.vue'),
     },
+    {
+      path: '/promise',
+      component: () => import('../pages/promise/index.vue'),
+    },
   ],
 })
 export default router

@@ -68,6 +68,7 @@ export default defineComponent({
       cursor: pointer;
     }
     .prev:hover {
+      filter: contrast(100%);
       border: 1px solid skyblue;
     }
     .page-box {
