@@ -42,6 +42,10 @@ const router = createRouter({
       component: () => import('../pages/three/index.vue'),
     },
     {
+      path: '/echarts',
+      component: () => import('../pages/echarts/index.vue'),
+    },
+    {
       path: '/testVue',
       component: () => import('../pages/testVue/index.vue'),
     },
