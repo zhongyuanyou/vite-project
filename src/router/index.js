@@ -57,6 +57,14 @@ const router = createRouter({
       path: '/promise',
       component: () => import('../pages/promise/index.vue'),
     },
+    {
+      path: '/snake',
+      component: () => import('../pages/snake/index.vue'),
+    },
+    {
+      path: '/snakeTest',
+      component: () => import('../pages/snake/test.vue'),
+    },
   ],
 })
 export default router
