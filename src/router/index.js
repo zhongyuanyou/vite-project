@@ -65,6 +65,10 @@ const router = createRouter({
       path: '/snakeTest',
       component: () => import('../pages/snake/test.vue'),
     },
+    {
+      path: '/pixi',
+      component: () => import('../pages/pixi/index.vue'),
+    },
   ],
 })
 export default router
