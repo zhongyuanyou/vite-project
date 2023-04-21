@@ -26,6 +26,10 @@ const router = createRouter({
       component: () => import('../pages/canvas/index.vue'),
     },
     {
+      path: '/animation',
+      component: () => import('../pages/canvas/animation.vue'),
+    },
+    {
       path: '/prizeDraw',
       component: () => import('../pages/prizeDraw/index.vue'),
     },
@@ -68,6 +72,14 @@ const router = createRouter({
     {
       path: '/pixi',
       component: () => import('../pages/pixi/index.vue'),
+    },
+    {
+      path: '/videoCanvas',
+      component: () => import('../pages/videoCanvas.vue'),
+    },
+    {
+      path: '/testDeg',
+      component: () => import('../pages/testDeg.vue'),
     },
   ],
 })

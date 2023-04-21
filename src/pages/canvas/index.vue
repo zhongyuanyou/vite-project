@@ -133,6 +133,7 @@ canvas.style.position = "absolute";
 canvas.style.border = "1px solid";
 document.body.appendChild(canvas);
 var canvas = document.getElementById('CursorLayer');
+console.log(canvas);
 // 得到canvas上下文
 var ctx = canvas.getContext('2d');
 ctx.moveTo(50, 0);
@@ -244,5 +245,6 @@ watchEffect(() => console.log(test.value), console.log(title.value))
 <style lang="less" scoped>
 .canvas-box {
   width: 100%;
+  color: transparent;
 }
 </style>
