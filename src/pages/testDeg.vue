@@ -13,10 +13,6 @@
           }">
         <div class="point"></div>
       </div>
-      <div class="content">
-        {{ angle_data+'°' }}
-      </div>
-
     </div>
   </div>
 
